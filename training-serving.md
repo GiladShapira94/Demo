@@ -4,6 +4,8 @@
 - [Get online features](#get-online-features)
 - [Incorporating to the serving model](#incorporating-to-the-serving-model)
 
+****Please Note**** - The model training is based on the lable column but does not save this column as a model feather that means that when you creating the feature vector you must not inclue it as a feature e.g transaction.lables.
+
 ## Get online features
 
 The online features are created ad-hoc using MLRun's feature store online feature service and are served from the **nosql** target for real-time performance needs.
