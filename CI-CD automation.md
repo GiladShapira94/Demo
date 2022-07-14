@@ -63,7 +63,7 @@ The set_artifact() method allow you to add artifacts to the project spec that wi
 # register a simple file artifact
 project.set_artifact('data', target_path=data_url)
 ````
-There are 3 objects to registet artifacts - 
+There are 3 objects for register artifacts - 
 * Model - ModelArtifact
 * Dataset - DatasetArtifact
 * Simple Artifact - Artifact
