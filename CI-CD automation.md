@@ -36,6 +36,8 @@ After you creating a function object you can use the [export()](https://docs.mlr
 
 The set_function method allow you to set the functions attributes in the project YAML, for example: 
 function source (YAML, py, ipynb, function object) , name of the fucntion, function handler, function image and kind
+
+**Important Note -** Remote functions as Serving and Nuclio need to set with thier function object to function YAML
 ````
 project.set_function(
     name="training", handler="training.model_training",
@@ -47,4 +49,5 @@ Or
 project.set_function(
     func="training.yaml")
 ````
+### Artifacts
 
