@@ -80,3 +80,14 @@ You can use the export() method to save the artifact object into a yaml/json fil
 <artifcat object>.export('./model.yaml')
 
 ````
+### Workflow
+For workflow defenition use [set_workflow()](https://docs.mlrun.org/en/latest/api/mlrun.projects.html?highlight=set_workflow#mlrun.projects.MlrunProject.set_workflow) method.
+
+The set_workflow() method alows user to add or update a workflow into the project spec , specify a name and the code path.
+
+````
+project.set_workflow('main', 'workflow.py', embed=True)
+````
+**Remember -** After a User complete to update/edit the project YAML, run `project.save()` 
+
+
