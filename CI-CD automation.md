@@ -88,6 +88,6 @@ The set_workflow() method alows user to add or update a workflow into the projec
 ````
 project.set_workflow('main', 'workflow.py', embed=True)
 ````
-**Remember -** After a User complete to update/edit the project YAML, run `project.save()` 
+**Remember -** After you complete to update/edit the project YAML, run `project.save()` 
 
 
