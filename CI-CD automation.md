@@ -44,10 +44,39 @@ project.set_function(
     image="mlrun/mlrun", kind="job", with_repo=True,
 )
 ````
-Or
+> Set the with_repo=True to add the entire repo code into the destination container during build or run time. 
+
+> When using with_repo=True the functions need to be deployed (function.deploy()) to build a container, unless you set project.spec.load_source_on_run=True which instructs MLRun to load the git/archive repo into the function container at run time and do not require a build (this is simpler when developing, for production it’s preferred to build the image with the code)
+
 ````
 project.set_function(
-    func="training.yaml")
+    func="training.yaml",name='training',with_repo=True)
 ````
 ### Artifacts
+For Artifacts Defenition use [set_artifact()](https://docs.mlrun.org/en/latest/api/mlrun.projects.html?highlight=set_artifact#mlrun.projects.MlrunProject.set_artifact) method.
 
+The set_artifact() method allow you to add artifacts to the project spec that will be registered on load.
+
+**Important Note -** The artifacts need to be store in a remote storage. 
+
+````
+# register a simple file artifact
+project.set_artifact('data', target_path=data_url)
+````
+There are 3 objects to registet artifacts - 
+* Model - ModelArtifact
+* Dataset - DatasetArtifact
+* Simple Artifact - Artifact
+
+````
+# register a model artifact
+project.set_artifact('model', ModelArtifact(model_file="model.pkl"), target_path=model_dir_url)
+
+# register a path to artifact package (will be imported on project load)
+project.set_artifact('model', 'https://mystuff.com/models/mymodel.zip')
+````
+You can use the export() method to save the artifact object into a yaml/json file or zip archive
+````
+<artifcat object>.export('./model.yaml')
+
+````
