@@ -27,11 +27,24 @@ On this section we will cover how to define each topic from the list above and p
 
 ### Functions
 For functions definations use the [set_function](https://docs.mlrun.org/en/latest/api/mlrun.projects.html?highlight=set_function#mlrun.projects.MlrunProject.set_function) method.
-* **Parameters  -**
-  * func – function object or spec/code url, None refers to current Notebook
-  * name – name of the function (under the project)
-  * kind – runtime kind e.g. job, nuclio, spark, dask, mpijob default: job
-  * image – docker image to be used, can also be specified in the function object/yaml
-  * handler – default function handler to invoke (can only be set with .py/.ipynb files), can contain a relative path to the function handler e.g training.model-training (handler model-training in training.py file)
-  * with_repo – add (clone) the current repo to the build source
-  * requirements – list of python packages or pip requirements file path
+
+Before you creating fucntion YAML you need to the create a fucntion object you can do it with [code_to_function()](https://docs.mlrun.org/en/latest/api/mlrun.html?highlight=code_to_function#mlrun.code_to_function), [new_function()](https://docs.mlrun.org/en/latest/api/mlrun.run.html?highlight=new_function#mlrun.run.new_function).
+After you creating a function object you can use the [export()](https://docs.mlrun.org/en/latest/api/mlrun.runtimes.html?highlight=export#mlrun.runtimes.BaseRuntime.export) method, For Example:
+````
+<function object>.export('./model_training.yaml')
+````
+
+The set_function method allow you to set the functions attributes in the project YAML, for example: 
+function source (YAML, py, ipynb, function object) , name of the fucntion, function handler, function image and kind
+````
+project.set_function(
+    name="training", handler="training.model_training",
+    image="mlrun/mlrun", kind="job", with_repo=True,
+)
+````
+Or
+````
+project.set_function(
+    func="training.yaml")
+````
+
