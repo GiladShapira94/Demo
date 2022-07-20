@@ -87,10 +87,9 @@ kubectl --namespace mlrun create secret docker-registry registry-credentials \
     --docker-password <your-password> \
     --docker-email <your-email>
 ```
-
 Where:
 
-- `<your-registry-server>` is your Private Docker Registry FQDN. (https://index.docker.io/v1/ for Docker Hub).
+- `<your-registry-server>` is your Private Docker Registry FQDN. (**ht<span>tps:/</span>index.docker.io/v1/** for Docker Hub).
 - `<your-username>` is your Docker username.
 - `<your-password>` is your Docker password.
 - `<your-email>` is your Docker email.
