@@ -4,7 +4,7 @@
 - [Prerequisites](#prerequisites)
 - [Installing on Docker Desktop](#installing-on-docker-desktop)
 - [Installing the chart](#installing-the-chart)
-- [Installing Kubeflow](#install-kubeflow)
+- [Installing Kubeflow](#installing-kubeflow)
 - [Start working](#start-working)
 - [Configuring the remote environment](#configuring-the-remote-environment)
 - [Advanced chart configuration](#advanced-chart-configuration)
