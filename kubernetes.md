@@ -3,7 +3,7 @@
 **In this section**
 - [Prerequisites](#prerequisites)
 - [Installing on Docker Desktop](#installing-on-docker-desktop)
-- [Installing the chart](#installing-the-ceehart)
+- [Installing the chart](#installing-the-chart)
 - [Installing Kubeflow](#install-kubeflow)
 - [Start working](#start-working)
 - [Configuring the remote environment](#configuring-the-remote-environment)
