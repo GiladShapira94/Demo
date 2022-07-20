@@ -1,4 +1,3 @@
-(install-on-kubernetes)=
 # Install MLRun on a Kubernetes Cluster
 
 **In this section**
