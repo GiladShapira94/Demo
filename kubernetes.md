@@ -135,7 +135,7 @@ helm --namespace mlrun \
     v3io-stable/mlrun-kit
 ```
 Where `$(minikube ip)` shell command resolving the external node address of the k8s node VM.
-<a id="installing-kubeflow"></a>
+
 ## Installing Kubeflow
 
 You can run your functions while saving outputs and artifacts in a way that is visible to Kubeflow Pipelines.
