@@ -2,6 +2,7 @@
 
 ### Project YAML
 Project YAML allows users to define thier project metadata and use this defention when they [load_project()](https://docs.mlrun.org/en/latest/api/mlrun.projects.html#mlrun.projects.load_project) or create [new_project()](https://docs.mlrun.org/en/latest/api/mlrun.projects.html#mlrun.projects.new_project)
+
 In the Project YAML you can define:
 * Functions 
 * Workflow
