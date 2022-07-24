@@ -91,4 +91,5 @@ project.set_workflow('main', 'workflow.py', embed=True)
 ````
 **Remember -** After you complete to update/edit the project YAML, run `project.save()` 
 
+For example how to create a new project and build an project YAML you can see  - create_project example
 
