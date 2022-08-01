@@ -56,5 +56,5 @@ with the CI systems.
 - Elastic scaling of each step
 - Extensive function marketplace 
 
-
+See an information about how to create and load project from Git, Zip, Tar source [here](https://github.com/GiladShapira94/load-project-example)
 See full details and examples in [Github/Gitlab and CI/CD Integration](../projects/ci-integration.html).
