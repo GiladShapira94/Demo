@@ -5,11 +5,7 @@ A workflow is a definition of execution of functions. It defines the order of ex
 directed acyclic graph (DAG). A workflow 
 can reference the project’s params, secrets, artifacts, etc. It can also use a function execution output as a function execution 
 input (which, of course, defines the order of execution).
-```{admonition} Note
-For ordering steps you can either use steps outputs as written above or use `.after(step_1,step_2,..)` method, 
-that allow the user to order workflow steps without the need to forward outputs of the previus steps, that means that the step that 
-use `.after(step_1,step_2)` will wait for the steps step_1 and step_1 to start to run.
-```
+
 MLRun supports running workflows on a `local` or [`kubeflow`](https://www.kubeflow.org/docs/components/pipelines/overview/pipelines-overview/) pipeline engine. The `local` engine runs the workflow as a 
 local process, which is simpler for debugging and running simple/sequential tasks. The `kubeflow` ("kfp") engine runs as a task over the 
 cluster and supports more advanced operations (conditions, branches, etc.). You can select the engine at runtime. Kubeflow-specific
@@ -106,7 +102,10 @@ def newpipe():
         inputs={"table": train.outputs["test_set"]},
     )
 ```
-
+```{admonition} Note
+For ordering steps you can either use steps outputs as written above or use `.after(step_1,step_2,..)` method, 
+that allow the user to order workflow steps without the need to forward outputs of the previus steps.
+```
 ## Saving workflows
 
 If you want to use workflows as part of an automated flow, save them and register them in the project. 
