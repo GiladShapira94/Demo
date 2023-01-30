@@ -103,8 +103,8 @@ def newpipe():
     )
 ```
 ```{admonition} Note
-For ordering steps you can either use steps outputs as written above or use `.after(step_1,step_2,..)` method, 
-that allow the user to order workflow steps without the need to forward outputs of the previus steps.
+For defining the steps order you can either use steps outputs as written above, or use `.after(step_1,step_2,..)` method, 
+that allows the user to define the order of the workflow steps without the need to forward the outputs from the previous steps.
 ```
 ## Saving workflows
 
